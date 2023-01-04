@@ -29,15 +29,14 @@ print(max_num_in_list([1,7,105,2341,6,145]))
 # Question 4(A function to return if the given year is a leap year):
 def is_leap_year(a_year):
     """Return "True" if given year is a leap year."""
-    if a_year % 4 == 0:
+    if a_year % 400 == 0:
         return True
-    # If you want it to return False when not leap year, include this:
-    # else:
-    #     return False
-print(is_leap_year(2020))
+    elif a_year % 4 == 0 and a_year % 100 != 0:
+        return True
+    else:
+        return False
+print(is_leap_year(1900))
         
-
-
 
 # Question 5(Check to see if all numbers in list are consecutive):
 def is_consecutive(a_list):
