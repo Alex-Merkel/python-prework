@@ -41,9 +41,10 @@ print(is_leap_year(1900))
 # Question 5(Check to see if all numbers in list are consecutive):
 def is_consecutive(a_list):
     """Check a list to see if the numbers are consecutive or not."""
-    if sorted(a_list) == list(range(min(a_list), max(a_list)+1)):
+    if a_list == list(range(min(a_list), max(a_list)+1)):
         return True
     else:
         return False
 
-print(is_consecutive([7, 3, 5, 6, 4]))
+print(is_consecutive([4,5,6,7,8]))
+print(is_consecutive([7,4,1,8,2]))
